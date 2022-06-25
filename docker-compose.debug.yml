@@ -47,7 +47,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
-      - shoppingdb-data:/site:/data/db
+      - shoppingdb-data:/data/db
 
 volumes:
   shoppingdb-data:
