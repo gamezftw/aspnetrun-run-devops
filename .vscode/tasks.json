@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj",
+                "${workspaceFolder}/Shopping/Shopping.Client/Shopping.Client.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Shopping.API/Shopping.API.csproj",
+                "${workspaceFolder}/Shopping/Shopping.API/Shopping.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -35,7 +35,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj",
+                "${workspaceFolder}/Shopping/Shopping.Client/Shopping.Client.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -49,7 +49,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj"
+                "${workspaceFolder}/Shopping/Shopping.Client/Shopping.Client.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -62,12 +62,12 @@
             "dockerBuild": {
                 "tag": "aspnetrunrundevops:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Shopping.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Shopping/Shopping.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
+                "appProject": "${workspaceFolder}/Shopping/Shopping.API/Shopping.API.csproj"
             }
         },
         {
@@ -78,12 +78,12 @@
             ],
             "dockerBuild": {
                 "tag": "aspnetrunrundevops:latest",
-                "dockerfile": "${workspaceFolder}/Shopping.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Shopping/Shopping.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
+                "appProject": "${workspaceFolder}/Shopping/Shopping.API/Shopping.API.csproj"
             }
         },
         {
@@ -94,7 +94,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj",
+                "appProject": "${workspaceFolder}/Shopping/Shopping.API/Shopping.API.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -107,7 +107,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
+                "appProject": "${workspaceFolder}/Shopping/Shopping.API/Shopping.API.csproj"
             }
         }
     ]

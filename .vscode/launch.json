@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-api",
-            "program": "${workspaceFolder}/Shopping.API/bin/Debug/net6.0/Shopping.API.dll",
+            "program": "${workspaceFolder}/Shopping/Shopping.API/bin/Debug/net6.0/Shopping.API.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Shopping.API",
             "stopAtEntry": false,
@@ -30,7 +30,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Shopping.Client/bin/Debug/net6.0/Shopping.Client.dll",
+            "program": "${workspaceFolder}/Shopping/Shopping.Client/bin/Debug/net6.0/Shopping.Client.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Shopping.Client",
             "stopAtEntry": false,
@@ -57,7 +57,7 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj"
+                "appProject": "${workspaceFolder}/Shopping/Shopping.Client/Shopping.Client.csproj"
             }
         }
     ]
