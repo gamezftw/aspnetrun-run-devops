@@ -14,6 +14,22 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "build-api",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Shopping.API/Shopping.API.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "publish",
             "command": "dotnet",
             "type": "process",
@@ -46,12 +62,12 @@
             "dockerBuild": {
                 "tag": "aspnetrunrundevops:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Shopping.Client/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Shopping.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj"
+                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
             }
         },
         {
@@ -62,12 +78,12 @@
             ],
             "dockerBuild": {
                 "tag": "aspnetrunrundevops:latest",
-                "dockerfile": "${workspaceFolder}/Shopping.Client/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Shopping.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj"
+                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
             }
         },
         {
@@ -78,7 +94,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj",
+                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -91,7 +107,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Shopping.Client/Shopping.Client.csproj"
+                "appProject": "${workspaceFolder}/Shopping.API/Shopping.API.csproj"
             }
         }
     ]
