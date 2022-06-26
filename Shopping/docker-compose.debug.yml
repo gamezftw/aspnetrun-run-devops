@@ -14,8 +14,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "DatabaseSettings:ConnectionString=mongodb://shoppingdb:27017"
-      - "DatabaseSettings:DatabaseName=CatalogDb"
-      - "DatabaseSettings:CollectionName=Products"
     depends_on: 
       - shopping.db
     volumes:
